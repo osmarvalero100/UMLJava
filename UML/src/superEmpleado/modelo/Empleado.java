@@ -1,4 +1,5 @@
 package superEmpleado.modelo;
+import superEmpleado.modelo.Empresa;
 
 public class Empleado {
     /**
@@ -77,21 +78,43 @@ public class Empleado {
     }
 
     public void asignarEmpleado(int codP, String nomP, String apeP, int salP) {
+        codigo=codP;
+        nombreEmpleado=nomP;
+        apeEmpleado=apeP;
+        salario=salP;
+        quincena=0;
+        auxTrans=0;
+        totalDevengado=0;
+        salud=0;
+        pension=0;
+        fsp=0;
+        totalDescuentos=0;
+        totalPagar=0;
     }
 
     public void calcularAuxTransporte(int dias) {
+        if(salario <= 2*Empresa.SML)
+            auxTrans= (int) (dias*Empresa.AT/30);
+        else
+            auxTrans=0;
     }
 
     public void calcularFSP(int dias) {
+        if(salario >= 4*Empresa.SML)
+            fsp=(int) (salario*dias/30*Empresa.FSP);
+        else
+            fsp=0;
     }
 
     public void calcularPension(int dias) {
     }
 
     public void calcularQuincena(int dias) {
+        quincena= (int) (salario*dias)/30;
     }
 
     public void calcularSalud(int dias) {
+        salud= (int) (salario*dias/30*Empresa.SALUD);
     }
 
     public int calcularTotalDescuentos() {
@@ -99,9 +122,11 @@ public class Empleado {
     }
 
     public void calcularTotalDevengado() {
+        totalDevengado=quincena+auxTrans;
     }
 
     public void calcularTotalPagar() {
+        totalPagar=totalDevengado-totalDescuentos;
     }
 
     public String getApeEmpleado() {
@@ -139,8 +164,14 @@ public class Empleado {
     public int getSalud() {
         return salud;
     }
+    public int getTotalPagar() {
+        return totalPagar;
+    }
 
     public int getTotalDevengado() {
+        return totalDevengado;
+    }
+    public int getTotalDescuentos() {
         return totalDevengado;
     }
 }
