@@ -28,6 +28,8 @@ import superEmpleado.modelo.Empresa;
 //import oracle.jdeveloper.layout.PaneLayout;
 
 public class Nomina extends JFrame {
+    Empleado empleado[] = new Empleado[5];
+    Empresa empresa = new Empresa();
     
     private JPanel jPanel1 = new JPanel();
     private JLabel jLabel1 = new JLabel();
@@ -312,7 +314,7 @@ public class Nomina extends JFrame {
        textTotalDescuentos.setText(df.format(empleado[i].getTotalDescuentos()));
        textPagar.setText(df.format(empleado[i].getTotalPagar()));
        //acumula el total a pagar del empleado utilizando el metodo calcularTotalNomina de Empresa
-       Empresa.calcularTotalNomina(empleado[i].getTotalPagar());
+       empresa.calcularTotalNomina(empleado[i].getTotalPagar());
        //Asigna al textbox el total que se acumula mediante el método darTotalNomina
        textAcumuladoNomina.setText(df.format(empresa.getTotalNomina()));
       }

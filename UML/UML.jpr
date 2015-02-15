@@ -65,6 +65,20 @@
       </list>
       <value n="webIANAEncoding" v="windows-1252"/>
    </hash>
+   <hash n="oracle.jdevimpl.config.JProjectLibraries">
+      <list n="exportedReferences">
+         <hash>
+            <url n="id" path="../../../../Users/osmar/AppData/Roaming/JDeveloper/system11.1.2.4.39.64.36.1/o.jdeveloper/MysqlConector.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+      <list n="libraryReferences">
+         <hash>
+            <url n="id" path="../../../../Users/osmar/AppData/Roaming/JDeveloper/system11.1.2.4.39.64.36.1/o.jdeveloper/MysqlConector.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+      </list>
+   </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>
    </hash>
