@@ -28,6 +28,8 @@ import superEmpleado.modelo.Empresa;
 //import oracle.jdeveloper.layout.PaneLayout;
 
 public class Nomina extends JFrame {
+    static final String CONTROLADOR_JDBC="com.mysql.jdbc.Driver";
+    static final String URL_BASEDATOS="jdbc:mysql://localhost/facturas";
     Empleado empleado[] = new Empleado[5];
     Empresa empresa = new Empresa();
     

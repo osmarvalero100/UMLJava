@@ -35,4 +35,4 @@ public class Conexion {
     
     
 }
-Conexion nomiconexion = new Conexion("localhost","nomina","root","DashSash$2013");
+//Conexion nomiconexion = new Conexion("localhost","nomina","root","DashSash$2013");

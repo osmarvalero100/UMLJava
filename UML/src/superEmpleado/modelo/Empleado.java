@@ -107,6 +107,7 @@ public class Empleado {
     }
 
     public void calcularPension(int dias) {
+        pension= (int) (salario*dias/30*Empresa.PENSION);
     }
 
     public void calcularQuincena(int dias) {
@@ -117,8 +118,8 @@ public class Empleado {
         salud= (int) (salario*dias/30*Empresa.SALUD);
     }
 
-    public int calcularTotalDescuentos() {
-        return totalDescuentos;
+    public void calcularTotalDescuentos() {
+        totalDescuentos = pension + salud + fsp;
     }
 
     public void calcularTotalDevengado() {
@@ -172,6 +173,6 @@ public class Empleado {
         return totalDevengado;
     }
     public int getTotalDescuentos() {
-        return totalDevengado;
+        return totalDescuentos;
     }
 }
